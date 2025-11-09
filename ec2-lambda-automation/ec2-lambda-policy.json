@@ -1,0 +1,28 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowEC2StartStopDescribeSpecificInstances",
+			"Effect": "Allow",
+			"Action": [
+				"ec2:StartInstances",
+				"ec2:StopInstances",
+				"ec2:DescribeInstances"
+			],
+			"Resource": [
+				"arn:aws:ec2:ap-south-1:581483106531:instance/i-08760efb3ce7cb26a",
+				"arn:aws:ec2:ap-south-1:581483106531:instance/i-02e88ddf81b2110b9"
+			]
+		},
+		{
+			"Sid": "AllowCloudWatchLogs",
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogGroup",
+				"logs:CreateLogStream",
+				"logs:PutLogEvents"
+			],
+			"Resource": "arn:aws:logs:ap-south-1:581483106531:*"
+		}
+	]
+}
